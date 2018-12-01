@@ -73,13 +73,13 @@ the code for a complete set.
 
 **import "https://github.com/naviarh/to"**
 
-This method involves writing an additional word to function names, for example:
+This method involves writing an additional prefix to function names, for example:
 
 	to.Int(..), to.Float64(..), to.String(..)
 
 **import . "https://github.com/naviarh/to"**
 
-This method removes the need for a prefix, but you must ensure that there are no conflicts with other libraries. Examples:
+This method removes the need for the prefix, but you must ensure that there are no conflicts with other libraries. Examples:
 
 	Int(..), Float64(..), String(..)
 
