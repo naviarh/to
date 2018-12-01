@@ -69,7 +69,7 @@ the code for a complete set.
     to.Int(nil)                // 0
 
 
-### 2 ways to use the library
+### 2 ways to use the library:
 
 	**import "https://github.com/naviarh/to"**
 
