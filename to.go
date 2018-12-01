@@ -4,7 +4,8 @@
 // license that can be found in the LICENSE file.
 
 // Package cast provides easy and safe casting in Go.
-package cast
+
+package to
 
 import "time"
 
