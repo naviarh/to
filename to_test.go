@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestToUintE(t *testing.T) {
+func TestUintE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect uint
@@ -52,7 +52,7 @@ func TestToUintE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToUintE(test.input)
+		v, err := UintE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -62,12 +62,12 @@ func TestToUintE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test:
-		v = ToUint(test.input)
+		v = Uint(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToUint64E(t *testing.T) {
+func TestUint64E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect uint64
@@ -105,7 +105,7 @@ func TestToUint64E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToUint64E(test.input)
+		v, err := Uint64E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -115,12 +115,12 @@ func TestToUint64E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test:
-		v = ToUint64(test.input)
+		v = Uint64(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToUint32E(t *testing.T) {
+func TestUint32E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect uint32
@@ -158,7 +158,7 @@ func TestToUint32E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToUint32E(test.input)
+		v, err := Uint32E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -168,12 +168,12 @@ func TestToUint32E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test:
-		v = ToUint32(test.input)
+		v = Uint32(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToUint16E(t *testing.T) {
+func TestUint16E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect uint16
@@ -211,7 +211,7 @@ func TestToUint16E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToUint16E(test.input)
+		v, err := Uint16E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -221,12 +221,12 @@ func TestToUint16E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToUint16(test.input)
+		v = Uint16(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToUint8E(t *testing.T) {
+func TestUint8E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect uint8
@@ -264,7 +264,7 @@ func TestToUint8E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToUint8E(test.input)
+		v, err := Uint8E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -274,12 +274,12 @@ func TestToUint8E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToUint8(test.input)
+		v = Uint8(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToIntE(t *testing.T) {
+func TestIntE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect int
@@ -309,7 +309,7 @@ func TestToIntE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToIntE(test.input)
+		v, err := IntE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -319,12 +319,12 @@ func TestToIntE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToInt(test.input)
+		v = Int(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToInt64E(t *testing.T) {
+func TestInt64E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect int64
@@ -354,7 +354,7 @@ func TestToInt64E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToInt64E(test.input)
+		v, err := Int64E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -364,12 +364,12 @@ func TestToInt64E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToInt64(test.input)
+		v = Int64(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToInt32E(t *testing.T) {
+func TestInt32E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect int32
@@ -399,7 +399,7 @@ func TestToInt32E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToInt32E(test.input)
+		v, err := Int32E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -409,12 +409,12 @@ func TestToInt32E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToInt32(test.input)
+		v = Int32(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToInt16E(t *testing.T) {
+func TestInt16E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect int16
@@ -444,7 +444,7 @@ func TestToInt16E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToInt16E(test.input)
+		v, err := Int16E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -454,12 +454,12 @@ func TestToInt16E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToInt16(test.input)
+		v = Int16(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToInt8E(t *testing.T) {
+func TestInt8E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect int8
@@ -489,7 +489,7 @@ func TestToInt8E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToInt8E(test.input)
+		v, err := Int8E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -499,12 +499,12 @@ func TestToInt8E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToInt8(test.input)
+		v = Int8(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToFloat64E(t *testing.T) {
+func TestFloat64E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect float64
@@ -533,7 +533,7 @@ func TestToFloat64E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToFloat64E(test.input)
+		v, err := Float64E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -543,12 +543,12 @@ func TestToFloat64E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToFloat64(test.input)
+		v = Float64(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToFloat32E(t *testing.T) {
+func TestFloat32E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect float32
@@ -577,7 +577,7 @@ func TestToFloat32E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToFloat32E(test.input)
+		v, err := Float32E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -587,12 +587,12 @@ func TestToFloat32E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToFloat32(test.input)
+		v = Float32(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringE(t *testing.T) {
+func TestStringE(t *testing.T) {
 	type Key struct {
 		k string
 	}
@@ -633,7 +633,7 @@ func TestToStringE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringE(test.input)
+		v, err := StringE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -643,7 +643,7 @@ func TestToStringE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToString(test.input)
+		v = String(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
@@ -656,10 +656,10 @@ func (x foo) String() string {
 	return x.val
 }
 
-func TestStringerToString(t *testing.T) {
+func TestStringerString(t *testing.T) {
 	var x foo
 	x.val = "bar"
-	assert.Equal(t, "bar", ToString(x))
+	assert.Equal(t, "bar", String(x))
 }
 
 type fu struct {
@@ -670,10 +670,10 @@ func (x fu) Error() string {
 	return x.val
 }
 
-func TestErrorToString(t *testing.T) {
+func TestErrorString(t *testing.T) {
 	var x fu
 	x.val = "bar"
-	assert.Equal(t, "bar", ToString(x))
+	assert.Equal(t, "bar", String(x))
 }
 
 func TestStringMapStringSliceE(t *testing.T) {
@@ -736,7 +736,7 @@ func TestStringMapStringSliceE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringMapStringSliceE(test.input)
+		v, err := StringMapStringSliceE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -746,12 +746,12 @@ func TestStringMapStringSliceE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringMapStringSlice(test.input)
+		v = StringMapStringSlice(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringMapE(t *testing.T) {
+func TestStringMapE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect map[string]interface{}
@@ -771,7 +771,7 @@ func TestToStringMapE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringMapE(test.input)
+		v, err := StringMapE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -781,12 +781,12 @@ func TestToStringMapE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringMap(test.input)
+		v = StringMap(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringMapBoolE(t *testing.T) {
+func TestStringMapBoolE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect map[string]bool
@@ -806,7 +806,7 @@ func TestToStringMapBoolE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringMapBoolE(test.input)
+		v, err := StringMapBoolE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -816,12 +816,12 @@ func TestToStringMapBoolE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringMapBool(test.input)
+		v = StringMapBool(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringMapIntE(t *testing.T) {
+func TestStringMapIntE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect map[string]int
@@ -844,7 +844,7 @@ func TestToStringMapIntE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringMapIntE(test.input)
+		v, err := StringMapIntE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -854,12 +854,12 @@ func TestToStringMapIntE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringMapInt(test.input)
+		v = StringMapInt(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringMapInt64E(t *testing.T) {
+func TestStringMapInt64E(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect map[string]int64
@@ -883,7 +883,7 @@ func TestToStringMapInt64E(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringMapInt64E(test.input)
+		v, err := StringMapInt64E(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -893,12 +893,12 @@ func TestToStringMapInt64E(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringMapInt64(test.input)
+		v = StringMapInt64(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringMapStringE(t *testing.T) {
+func TestStringMapStringE(t *testing.T) {
 	var stringMapString = map[string]string{"key 1": "value 1", "key 2": "value 2", "key 3": "value 3"}
 	var stringMapInterface = map[string]interface{}{"key 1": "value 1", "key 2": "value 2", "key 3": "value 3"}
 	var interfaceMapString = map[interface{}]string{"key 1": "value 1", "key 2": "value 2", "key 3": "value 3"}
@@ -928,7 +928,7 @@ func TestToStringMapStringE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringMapStringE(test.input)
+		v, err := StringMapStringE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -938,12 +938,12 @@ func TestToStringMapStringE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringMapString(test.input)
+		v = StringMapString(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToBoolSliceE(t *testing.T) {
+func TestBoolSliceE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect []bool
@@ -962,7 +962,7 @@ func TestToBoolSliceE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToBoolSliceE(test.input)
+		v, err := BoolSliceE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -972,12 +972,12 @@ func TestToBoolSliceE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToBoolSlice(test.input)
+		v = BoolSlice(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToIntSliceE(t *testing.T) {
+func TestIntSliceE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect []int
@@ -996,7 +996,7 @@ func TestToIntSliceE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToIntSliceE(test.input)
+		v, err := IntSliceE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1006,12 +1006,12 @@ func TestToIntSliceE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToIntSlice(test.input)
+		v = IntSlice(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToSliceE(t *testing.T) {
+func TestSliceE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect []interface{}
@@ -1027,7 +1027,7 @@ func TestToSliceE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToSliceE(test.input)
+		v, err := SliceE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1037,12 +1037,12 @@ func TestToSliceE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToSlice(test.input)
+		v = Slice(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToStringSliceE(t *testing.T) {
+func TestStringSliceE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect []string
@@ -1059,7 +1059,7 @@ func TestToStringSliceE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToStringSliceE(test.input)
+		v, err := StringSliceE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1069,12 +1069,12 @@ func TestToStringSliceE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToStringSlice(test.input)
+		v = StringSlice(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToDurationSliceE(t *testing.T) {
+func TestDurationSliceE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect []time.Duration
@@ -1094,7 +1094,7 @@ func TestToDurationSliceE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToDurationSliceE(test.input)
+		v, err := DurationSliceE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1104,12 +1104,12 @@ func TestToDurationSliceE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToDurationSlice(test.input)
+		v = DurationSlice(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func TestToBoolE(t *testing.T) {
+func TestBoolE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect bool
@@ -1141,7 +1141,7 @@ func TestToBoolE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToBoolE(test.input)
+		v, err := BoolE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1151,14 +1151,14 @@ func TestToBoolE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToBool(test.input)
+		v = Bool(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
 
-func BenchmarkTooBool(b *testing.B) {
+func BenchmarkBool(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		if !ToBool(true) {
+		if !Bool(true) {
 			b.Fatal("ToBool returned false")
 		}
 	}
@@ -1169,11 +1169,11 @@ func TestIndirectPointers(t *testing.T) {
 	y := &x
 	z := &y
 
-	assert.Equal(t, ToInt(y), 13)
-	assert.Equal(t, ToInt(z), 13)
+	assert.Equal(t, Int(y), 13)
+	assert.Equal(t, Int(z), 13)
 }
 
-func TestToTimeEE(t *testing.T) {
+func TestTimeEE(t *testing.T) {
 	tests := []struct {
 		input  interface{}
 		expect time.Time
@@ -1219,7 +1219,7 @@ func TestToTimeEE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToTimeE(test.input)
+		v, err := TimeE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1229,12 +1229,12 @@ func TestToTimeEE(t *testing.T) {
 		assert.Equal(t, test.expect, v.UTC(), errmsg)
 
 		// Non-E test
-		v = ToTime(test.input)
+		v = Time(test.input)
 		assert.Equal(t, test.expect, v.UTC(), errmsg)
 	}
 }
 
-func TestToDurationE(t *testing.T) {
+func TestDurationE(t *testing.T) {
 	var td time.Duration = 5
 
 	tests := []struct {
@@ -1271,7 +1271,7 @@ func TestToDurationE(t *testing.T) {
 	for i, test := range tests {
 		errmsg := fmt.Sprintf("i = %d", i) // assert helper message
 
-		v, err := ToDurationE(test.input)
+		v, err := DurationE(test.input)
 		if test.iserr {
 			assert.Error(t, err, errmsg)
 			continue
@@ -1281,7 +1281,7 @@ func TestToDurationE(t *testing.T) {
 		assert.Equal(t, test.expect, v, errmsg)
 
 		// Non-E test
-		v = ToDuration(test.input)
+		v = Duration(test.input)
 		assert.Equal(t, test.expect, v, errmsg)
 	}
 }
