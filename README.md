@@ -1,3 +1,5 @@
+forked from **spf13/cast**
+
 cast
 ====
 [![GoDoc](https://godoc.org/github.com/spf13/cast?status.svg)](https://godoc.org/github.com/spf13/cast)
