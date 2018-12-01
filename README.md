@@ -1,24 +1,24 @@
 forked from **[spf13/cast](https://github.com/spf13/cast)**
 
-"To"
-====
+To
+==
 
-Easy and safe "To"ing from one type to another in Go
+Easy and safe casting from one type to another in Go
 
-## What is "To"?
+## What is this?
 
-"To" is a library to convert between different go types in a consistent and easy way.
+"**To**" is a library to convert between different go types in a consistent and easy way.
 
-"To" provides simple functions to easily convert a number to a string, an
-interface into a bool, etc. "To" does this intelligently when an obvious
+"**To**" provides simple functions to easily convert a number to a string, an
+interface into a bool, etc. "**To**" does this intelligently when an obvious
 conversion is possible. It doesn’t make any attempts to guess what you meant,
 for example you can only convert a string to an int when it is a string
 representation of an int such as “8”.
 
-## Why use "To"?
+## Why use this?
 
 When working with dynamic data in Go you often need to "To" or convert the data
-from one type into another. "To" goes beyond just using type assertion (though
+from one type into another. "**To**" goes beyond just using type assertion (though
 it uses that when possible) to provide a very straightforward and convenient
 library.
 
@@ -27,15 +27,15 @@ you’ll need an easy way to convert an interface into a given type. This
 is the library for you.
 
 If you are taking in data from YAML, TOML or JSON or other formats which lack
-full types, then "To" is the library for you.
+full types, then "**To**" is the library for you.
 
 ## Usage
 
-"To" provides a handful of to._____ methods. These methods will always return
+"**To**" provides a handful of to._____ methods. These methods will always return
 the desired type. **If input is provided that will not convert to that type, the
 0 or nil value for that type will be returned**.
 
-"To" also provides identical methods to._____E. These return the same result as
+"**To**" also provides identical methods to._____E. These return the same result as
 the to._____ methods, plus an additional error which tells you if it successfully
 converted. Using these methods you can tell the difference between when the
 input matched the zero value or when the conversion failed and the zero value
