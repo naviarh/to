@@ -35,7 +35,7 @@ full types, then "**To**" is the library for you.
 the desired type. **If input is provided that will not convert to that type, the
 0 or nil value for that type will be returned**.
 
-"**To**" also provides identical methods to._____E. These return the same result as
+"**To**" also provides identical methods to._ ___ _E . These return the same result as
 the to._____ methods, plus an additional error which tells you if it successfully
 converted. Using these methods you can tell the difference between when the
 input matched the zero value or when the conversion failed and the zero value
@@ -56,7 +56,7 @@ the code for a complete set.
     to.String(foo)                // "one more time"
 
 
-### Example ‘Int’:
+### Example ‘Int’:_
 
     to.Int(8)                  // 8
     to.Int(8.31)               // 8
