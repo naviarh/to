@@ -46,7 +46,7 @@ the code for a complete set.
 
 ### Example ‘String’:
 
-    ```go
+```go
     to.String("mayonegg")         // "mayonegg"
     to.String(8)                  // "8"
     to.String(8.31)               // "8.31"
@@ -58,11 +58,11 @@ the code for a complete set.
     
     _,err := to.StringE(foo)      // return error
     if err != nil {}
-    ```
+```
 
 ### Example ‘Int’:
 
-    ```go
+```go
     to.Int(8)                  // 8
     to.Int(8.31)               // 8
     to.Int("8")                // 8
@@ -75,7 +75,7 @@ the code for a complete set.
     
     _,err := to.StringE(eight) // return error
     if err != nil {}
-    ```
+```
 
 
 ### 2 ways to use the library:
@@ -84,12 +84,16 @@ the code for a complete set.
 
 This method involves writing an additional prefix to function names, for example:
 
-	to.Int(..), to.Float64(..), to.String(..)
+```go
+to.Int(..), to.Float64(..), to.String(..)
+```
 
 **import . "https://github.com/naviarh/to"**
 
 This method removes the need for the prefix, but you must ensure that there are no conflicts with other libraries. Examples:
 
-	Int(..), Float64(..), String(..)
+```go
+Int(..), Float64(..), String(..)
+```
 
 
