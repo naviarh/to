@@ -45,28 +45,36 @@ The following examples are merely a sample of what is available. Please review
 the code for a complete set.
 
 ### Example ‘String’:
-
+    ```go
     to.String("mayonegg")         // "mayonegg"
     to.String(8)                  // "8"
     to.String(8.31)               // "8.31"
     to.String([]byte("one time")) // "one time"
     to.String(nil)                // ""
 
-	var foo interface{} = "one more time"
+    var foo interface{} = "one more time"
     to.String(foo)                // "one more time"
+    
+    _,err := to.StringE(foo)               // return error
+    if err != nil {}
+    ```
 
 
-### Example ‘Int’:_
-
+### Example ‘Int’:
+    ```go
     to.Int(8)                  // 8
     to.Int(8.31)               // 8
     to.Int("8")                // 8
     to.Int(true)               // 1
     to.Int(false)              // 0
-
-	var eight interface{} = 8
-    to.Int(eight)              // 8
     to.Int(nil)                // 0
+
+    var eight interface{} = 8
+    to.Int(eight)              // 8
+    
+    _,err := to.StringE(eight)               // return error
+    if err != nil {}
+    ```
 
 
 ### 2 ways to use the library:
