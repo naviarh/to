@@ -80,7 +80,9 @@ the code for a complete set.
 
 ### 2 ways to use the library:
 
-**import "https://github.com/naviarh/to"**
+```go
+    import "https://github.com/naviarh/to"
+```
 
 This method involves writing an additional prefix to function names, for example:
 
@@ -88,7 +90,9 @@ This method involves writing an additional prefix to function names, for example
 to.Int(..), to.Float64(..), to.String(..)
 ```
 
-**import . "https://github.com/naviarh/to"**
+```go
+   import . "https://github.com/naviarh/to"
+```
 
 This method removes the need for the prefix, but you must ensure that there are no conflicts with other libraries. Examples:
 
