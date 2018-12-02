@@ -78,7 +78,7 @@ the code for a complete set.
 ```
 
 
-### 2 ways to use the library:
+### Two ways to use the library:
 
 **1.**
 
