@@ -73,7 +73,7 @@ the code for a complete set.
     var eight interface{} = 8
     to.Int(eight)              // 8
     
-    _,err := to.StringE(eight) // return error
+    _,err := to.IntE(eight) // return error
     if err != nil {}
 ```
 
